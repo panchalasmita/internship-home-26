@@ -1,0 +1,178 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main App */
+.app {
+  display: flex;
+  height: 100vh;
+  background: #202123;
+}
+
+/* =======================
+   Sidebar
+======================= */
+
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.new-chat-btn {
+  background: #10a37f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.new-chat-btn:hover {
+  background: #0d8b6c;
+}
+
+.history h3 {
+  margin-bottom: 15px;
+  color: #d1d5db;
+}
+
+.history-item {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.history-item:hover {
+  background: #374151;
+}
+
+/* =======================
+   Chat Area
+======================= */
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #343541;
+}
+
+/* Chat Window */
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+/* =======================
+   Messages
+======================= */
+
+.message {
+  max-width: 70%;
+  margin-bottom: 18px;
+  padding: 14px;
+  border-radius: 15px;
+  word-wrap: break-word;
+}
+
+.bot-message {
+  background: #444654;
+  color: white;
+  align-self: flex-start;
+}
+
+.user-message {
+  background: #10a37f;
+  color: white;
+  margin-left: auto;
+}
+
+.message-text {
+  font-size: 16px;
+}
+
+.message-time {
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0.7;
+}
+
+/* =======================
+   Input
+======================= */
+
+.message-input {
+  display: flex;
+  padding: 20px;
+  background: #40414f;
+  border-top: 1px solid #555;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.message-input button {
+  margin-left: 10px;
+  padding: 15px 25px;
+  border: none;
+  background: #10a37f;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.message-input button:hover {
+  background: #0d8b6c;
+}
+
+/* =======================
+   Responsive
+======================= */
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .message-input {
+    padding: 10px;
+  }
+
+  .message-input button {
+    padding: 12px 18px;
+  }
+}
